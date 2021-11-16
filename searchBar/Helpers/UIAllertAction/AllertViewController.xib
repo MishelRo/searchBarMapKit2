@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllertViewController" customModule="searchBar" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Jd9-g8-1QX" id="7KJ-fy-7Wg"/>
+                <outlet property="heightConstaint" destination="ySr-Iw-N2r" id="z97-g9-85r"/>
+                <outlet property="myView" destination="4En-p1-qRI" id="foE-ta-8BZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jd9-g8-1QX">
+                    <rect key="frame" x="0.0" y="616" width="414" height="280"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="ySr-Iw-N2r"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NqE-ps-kZl">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4En-p1-qRI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="616"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Jd9-g8-1QX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0X0-qY-X4w"/>
+                <constraint firstItem="4En-p1-qRI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AHg-Ra-j14"/>
+                <constraint firstAttribute="bottom" secondItem="Jd9-g8-1QX" secondAttribute="bottom" id="AOr-UP-A9U"/>
+                <constraint firstItem="Jd9-g8-1QX" firstAttribute="top" secondItem="4En-p1-qRI" secondAttribute="bottom" id="Cj7-iK-Vl6"/>
+                <constraint firstItem="4En-p1-qRI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g79-1D-2yh"/>
+                <constraint firstItem="4En-p1-qRI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="it6-4C-StQ"/>
+                <constraint firstItem="Jd9-g8-1QX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vX5-OT-aUa"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
