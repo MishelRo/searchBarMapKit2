@@ -19,7 +19,8 @@ class GetPointViewControlller: UIViewController, CLLocationManagerDelegate, UIGe
     var firstLaunchView = true
     var constraint = 340.0
     let locationManager = CLLocationManager()
-    
+    var alert: AllertViewController!
+
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class GetPointViewControlller: UIViewController, CLLocationManagerDelegate, UIGe
         mapView.delegate = self
         heightConfigure()
         stackView = UIStackView()
+        alert = AllertViewController()
+        alert.delegate = self
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
@@ -96,7 +99,18 @@ class GetPointViewControlller: UIViewController, CLLocationManagerDelegate, UIGe
     }
     
     func updateVal(val: Int) {
-        print(val)
+        let view = TwoLabelsDetailButtonView()
+        GeoLocations().geoData(lat: mapView.centerCoordinate.latitude, lon: mapView.centerCoordinate.longitude) { [unowned self] placeMark in
+            view.changeConfigure(lat: mapView.centerCoordinate.latitude, long: mapView.centerCoordinate.longitude, state: "\(val)", placeMark: "\(placeMark.country ?? ""), \(placeMark.administrativeArea ?? ""), \(placeMark.name ?? "")" ) {
+            self.alert.delegate = self
+              self.alert.modalPresentationStyle = .automatic
+              self.present(self.alert, animated: true, completion: nil)
+        }
+        stackView.removeSubviews()
+                           [view].forEach { stackView.addArrangedSubview($0) }
+                           self.view.layoutIfNeeded()
+               clicked = true
+        }
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -105,10 +119,6 @@ class GetPointViewControlller: UIViewController, CLLocationManagerDelegate, UIGe
             if clicked == false {
                 let view = TwoLabelsDetailButtonView()
                 view.configure(lat: center.latitude, long: center.longitude, placeMarkName: "\(placeMark.country ?? ""), \(placeMark.administrativeArea ?? ""), \(placeMark.name ?? "")") {
-                    let alert = AllertViewController()
-                    alert.delegate = self
-                    
-                    alert.modalPresentationStyle = .automatic
                     self.present(alert, animated: true, completion: nil)
                 }
                             stackView.removeSubviews()
@@ -126,8 +136,4 @@ class GetPointViewControlller: UIViewController, CLLocationManagerDelegate, UIGe
     }
 }
 
-extension GetPointViewControlller: TwoLabelsDetailButtonProtocol{
-    func updateCoordinate(lat: Double, long: Double) {
-        mapView.camera.centerCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
-    }
-}
+

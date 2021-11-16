@@ -24,6 +24,7 @@ class MapViewController: UIViewController {
     var alert: AllertViewController!
     var sortedByState = false
     var sortedById = false
+    var cell: TwoLabelsDetailButtonView!
     
     var activityIndicator: UIActivityIndicatorView!
     var searchController : UISearchController!
@@ -50,6 +51,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         heightConfigure()
+        cell = TwoLabelsDetailButtonView()
+        cell.delegate = self
         alert = AllertViewController()
         alert.delegate = self
         calloutView = BezierView()
@@ -314,6 +317,11 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         calloutView.removeFromSuperview()
         stackView.isHidden = true
+    }
+}
+extension MapViewController: TwoLabelsDetailButtonProtocol{
+    func updateCoordinate(lat: Double, long: Double) {
+        print("change data in coredata")
     }
 }
 

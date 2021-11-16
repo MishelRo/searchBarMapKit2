@@ -88,7 +88,7 @@ class TwoLabelsDetailButtonView: NibLoadableView, UITextFieldDelegate {
     
     func changeConfigure(lat: CLLocationDegrees,
                          long: CLLocationDegrees,
-                         state: String, complession: @escaping (()->())) {
+                         state: String, placeMark: String, complession: @escaping (()->())) {
         self.lat = lat
         lon = long
         launchFromMain = true
@@ -96,9 +96,21 @@ class TwoLabelsDetailButtonView: NibLoadableView, UITextFieldDelegate {
         deletedLon = long
         latLabel.text = "\(lat)" + " "
         longLabel.text = "\(long)" + " "
-        headingTextField.text = "\(state)"
+        pointName.text = placeMark
         complessionAlert = complession
-        delegate = GetPointViewControlller()
+        delegate = MapViewController()
+        switch state {
+        case Constants.getStatus(status: .stateZero) :
+            stateLabel.text = Constants.getStatus(status: .alarm)
+        case Constants.getStatus(status: .stateOne):
+            stateLabel.text = Constants.getStatus(status: .stop)
+        case Constants.getStatus(status: .stateTwo):
+            stateLabel.text = Constants.getStatus(status: .movement)
+        case Constants.getStatus(status: .stateThree):
+            stateLabel.text = Constants.getStatus(status: .parking)
+        default:
+            break
+        }
     }
     
     override func awakeFromNib() {
@@ -117,7 +129,7 @@ class TwoLabelsDetailButtonView: NibLoadableView, UITextFieldDelegate {
         print(placeMarkName)
         complessionAlert = complession
         pointName.text = placeMarkName
-        delegate = GetPointViewControlller()
+        delegate = MapViewController()
     }
     
     override func viewDidLoad() {
