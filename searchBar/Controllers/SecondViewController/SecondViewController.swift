@@ -34,11 +34,11 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alert.delegate = self
         tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
         alert = AllertViewController()
+        alert.delegate = self
         model = SecondViewControllerModel()
         searchControllerConfigure()
         loadData()
