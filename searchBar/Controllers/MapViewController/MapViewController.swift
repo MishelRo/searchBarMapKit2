@@ -71,10 +71,33 @@ class MapViewController: UIViewController {
         layuot()
         searchControllerConfigure()
         setupPoints()
+        barButtonConfig()
         reuseIdentifier = Constants.getStatus(status: .reuseIdentifier)
         mapView.register(AnnotationView.self,
                          forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
     }
+    
+    func barButtonConfig() {
+        let button = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchCoordinate))
+        navigationItem.rightBarButtonItem = button
+    }
+    
+    @objc func searchCoordinate() {
+        
+       UIAlertController.setNewCoordinate { [unowned self] points in
+           let annotation = MKPointAnnotation()
+           annotation.coordinate = CLLocationCoordinate2D(latitude: Double(points.lat)!, longitude: Double(points.lon)!)
+           self.mapView.addAnnotation(annotation)
+           self.model.savePoint(points: points)
+           self.mapView.camera = MKMapCamera(lookingAtCenter: annotation.coordinate,
+                                             fromDistance: 4000000,
+                                             pitch: 3,
+                                             heading: .greatestFiniteMagnitude)
+       } alertCompletion: { controller in
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+
     
     func heightConfigure() {
         if UIScreen.isPhone7() {

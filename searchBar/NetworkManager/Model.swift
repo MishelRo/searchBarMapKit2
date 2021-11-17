@@ -13,3 +13,7 @@ struct Model: Codable {
     let state, heading: Int
 }
 
+struct newPoint: Codable {
+    let lat: String
+    let lon: String
+}

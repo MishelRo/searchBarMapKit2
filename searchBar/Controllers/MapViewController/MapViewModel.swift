@@ -15,6 +15,7 @@ protocol MapViewModelProtocol {
     func setPlaceMark(model: Model, complession: @escaping(MKPointAnnotation)->())
     func setPoints(points: [Model], complession: @escaping(MKPointAnnotation)->())
     func sorted(state: Int, complession: @escaping((MKPointAnnotation)->()))
+    func savePoint(points: newPoint)
 }
 
 import UIKit
@@ -93,6 +94,10 @@ class MapViewModel: MapViewModelProtocol {
                 arrayOfAnotation.append(annotation)
                 complession(annotation)
             }
+        }
+    }
+    func savePoint(points: newPoint) {
+        CoreDataManager.shared.saveCDNewPoint(data: Model(id: points.lon + points.lat, lat: Double(points.lat)!, lon: Double(points.lon)!, state: 22, heading: 0)) {
         }
     }
 }

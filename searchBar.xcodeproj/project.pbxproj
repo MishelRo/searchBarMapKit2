@@ -10,6 +10,7 @@
 		CE260CA52742A61B005B1EA8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE260CA42742A61B005B1EA8 /* UIViewController.swift */; };
 		CE260CA72742A671005B1EA8 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE260CA62742A671005B1EA8 /* UIResponder.swift */; };
 		CE260CDA27443DDD005B1EA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE260CD927443DDD005B1EA8 /* Constants.swift */; };
+		CE260CDC2744C59B005B1EA8 /* UiAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE260CDB2744C59B005B1EA8 /* UiAlertController.swift */; };
 		CE4CEAE8273EF4B500FC4B66 /* TwoLabelDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CEAE7273EF4B500FC4B66 /* TwoLabelDetailModel.swift */; };
 		CE4CEAEC273EF68E00FC4B66 /* geoCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CEAEB273EF68E00FC4B66 /* geoCoder.swift */; };
 		CE5C4DA3273A862100AE52AF /* DeletedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C4DA2273A862100AE52AF /* DeletedManager.swift */; };
@@ -27,7 +28,6 @@
 		CE5C4DE8273AA3FD00AE52AF /* AllertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5C4DE2273AA3FD00AE52AF /* AllertViewController.xib */; };
 		CE5C4DE9273AA3FD00AE52AF /* AllertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C4DE4273AA3FD00AE52AF /* AllertCollectionViewCell.swift */; };
 		CE5C4DEA273AA3FD00AE52AF /* AllertCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5C4DE5273AA3FD00AE52AF /* AllertCollectionViewCell.xib */; };
-		CE5C4DEB273AA3FD00AE52AF /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C4DE6273AA3FD00AE52AF /* CustomAlertController.swift */; };
 		CE9B1363272AAF2D0079C448 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B1362272AAF2D0079C448 /* AnnotationView.swift */; };
 		CED03A8C2728616400B80C0C /* BezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED03A8B2728616400B80C0C /* BezierView.swift */; };
 		CED6B0A72725FA25003F139F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6B0A52725FA25003F139F /* TableViewCell.swift */; };
@@ -59,6 +59,7 @@
 		CE260CA42742A61B005B1EA8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CE260CA62742A671005B1EA8 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		CE260CD927443DDD005B1EA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE260CDB2744C59B005B1EA8 /* UiAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiAlertController.swift; sourceTree = "<group>"; };
 		CE4CEAE7273EF4B500FC4B66 /* TwoLabelDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelDetailModel.swift; sourceTree = "<group>"; };
 		CE4CEAEB273EF68E00FC4B66 /* geoCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geoCoder.swift; sourceTree = "<group>"; };
 		CE5C4DA2273A862100AE52AF /* DeletedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletedManager.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		CE5C4DE2273AA3FD00AE52AF /* AllertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllertViewController.xib; sourceTree = "<group>"; };
 		CE5C4DE4273AA3FD00AE52AF /* AllertCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllertCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE5C4DE5273AA3FD00AE52AF /* AllertCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllertCollectionViewCell.xib; sourceTree = "<group>"; };
-		CE5C4DE6273AA3FD00AE52AF /* CustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
 		CE9B1362272AAF2D0079C448 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		CED03A8B2728616400B80C0C /* BezierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierView.swift; sourceTree = "<group>"; };
 		CED6B0A52725FA25003F139F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -229,7 +229,6 @@
 				CE5C4DE1273AA3FD00AE52AF /* AllertViewController.swift */,
 				CE5C4DE2273AA3FD00AE52AF /* AllertViewController.xib */,
 				CE5C4DE3273AA3FD00AE52AF /* Cell */,
-				CE5C4DE6273AA3FD00AE52AF /* CustomAlertController.swift */,
 			);
 			path = UIAllertAction;
 			sourceTree = "<group>";
@@ -355,6 +354,7 @@
 				CEFA0BAD273D26D700A3BC7B /* UiScreen.swift */,
 				CE260CA42742A61B005B1EA8 /* UIViewController.swift */,
 				CE260CA62742A671005B1EA8 /* UIResponder.swift */,
+				CE260CDB2744C59B005B1EA8 /* UiAlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,7 +484,6 @@
 				CE5C4DE7273AA3FD00AE52AF /* AllertViewController.swift in Sources */,
 				CE5C4DAB273A873000AE52AF /* KeyBoardConstraints.swift in Sources */,
 				CED9F8632720597400ACD752 /* MapViewModel.swift in Sources */,
-				CE5C4DEB273AA3FD00AE52AF /* CustomAlertController.swift in Sources */,
 				CE5C4DA9273A86FE00AE52AF /* GetPointViewControlller.swift in Sources */,
 				CE5C4DB2273A88CF00AE52AF /* View.swift in Sources */,
 				CE5C4DB1273A88CF00AE52AF /* NSObject+Load.swift in Sources */,
@@ -502,6 +501,7 @@
 				CE260CA72742A671005B1EA8 /* UIResponder.swift in Sources */,
 				CED9F85C27204D4F00ACD752 /* NetworkManager.swift in Sources */,
 				CED9F8672720688300ACD752 /* SecondViewControllerModel.swift in Sources */,
+				CE260CDC2744C59B005B1EA8 /* UiAlertController.swift in Sources */,
 				CE9B1363272AAF2D0079C448 /* AnnotationView.swift in Sources */,
 				CE5C4DB3273A88CF00AE52AF /* NibLoadableView.swift in Sources */,
 				CE4CEAEC273EF68E00FC4B66 /* geoCoder.swift in Sources */,
