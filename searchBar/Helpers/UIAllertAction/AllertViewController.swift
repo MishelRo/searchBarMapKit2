@@ -23,13 +23,13 @@ class AllertViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     weak var delegate: AllertViewControllerDelegate?
-    
+
     var arrayOfText = ["тревога",
                        "отстановка",
                        "движение",
                        "парковка"]
     var arrayOfImage = ["warnings", "stop", "moveme", "parking" ]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         heightConfigure()

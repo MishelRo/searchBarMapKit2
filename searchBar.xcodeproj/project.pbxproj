@@ -11,6 +11,8 @@
 		CE260CA72742A671005B1EA8 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE260CA62742A671005B1EA8 /* UIResponder.swift */; };
 		CE260CDA27443DDD005B1EA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE260CD927443DDD005B1EA8 /* Constants.swift */; };
 		CE260CDC2744C59B005B1EA8 /* UiAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE260CDB2744C59B005B1EA8 /* UiAlertController.swift */; };
+		CE260CDE27456D44005B1EA8 /* AllertCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE260CDD27456D44005B1EA8 /* AllertCollectionViewCell.xib */; };
+		CE260CE0274582F6005B1EA8 /* AllertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE260CDF274582F6005B1EA8 /* AllertViewController.xib */; };
 		CE4CEAE8273EF4B500FC4B66 /* TwoLabelDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CEAE7273EF4B500FC4B66 /* TwoLabelDetailModel.swift */; };
 		CE4CEAEC273EF68E00FC4B66 /* geoCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CEAEB273EF68E00FC4B66 /* geoCoder.swift */; };
 		CE5C4DA3273A862100AE52AF /* DeletedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C4DA2273A862100AE52AF /* DeletedManager.swift */; };
@@ -25,9 +27,7 @@
 		CE5C4DDB273A8C1D00AE52AF /* TwoLabelsDetailButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C4DD9273A8C1C00AE52AF /* TwoLabelsDetailButtonView.swift */; };
 		CE5C4DDC273A8C1D00AE52AF /* TwoLabelsDetailButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5C4DDA273A8C1D00AE52AF /* TwoLabelsDetailButtonView.xib */; };
 		CE5C4DE7273AA3FD00AE52AF /* AllertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C4DE1273AA3FD00AE52AF /* AllertViewController.swift */; };
-		CE5C4DE8273AA3FD00AE52AF /* AllertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5C4DE2273AA3FD00AE52AF /* AllertViewController.xib */; };
 		CE5C4DE9273AA3FD00AE52AF /* AllertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C4DE4273AA3FD00AE52AF /* AllertCollectionViewCell.swift */; };
-		CE5C4DEA273AA3FD00AE52AF /* AllertCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5C4DE5273AA3FD00AE52AF /* AllertCollectionViewCell.xib */; };
 		CE9B1363272AAF2D0079C448 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B1362272AAF2D0079C448 /* AnnotationView.swift */; };
 		CED03A8C2728616400B80C0C /* BezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED03A8B2728616400B80C0C /* BezierView.swift */; };
 		CED6B0A72725FA25003F139F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6B0A52725FA25003F139F /* TableViewCell.swift */; };
@@ -60,6 +60,8 @@
 		CE260CA62742A671005B1EA8 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		CE260CD927443DDD005B1EA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE260CDB2744C59B005B1EA8 /* UiAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiAlertController.swift; sourceTree = "<group>"; };
+		CE260CDD27456D44005B1EA8 /* AllertCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllertCollectionViewCell.xib; sourceTree = "<group>"; };
+		CE260CDF274582F6005B1EA8 /* AllertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllertViewController.xib; sourceTree = "<group>"; };
 		CE4CEAE7273EF4B500FC4B66 /* TwoLabelDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelDetailModel.swift; sourceTree = "<group>"; };
 		CE4CEAEB273EF68E00FC4B66 /* geoCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geoCoder.swift; sourceTree = "<group>"; };
 		CE5C4DA2273A862100AE52AF /* DeletedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletedManager.swift; sourceTree = "<group>"; };
@@ -74,9 +76,7 @@
 		CE5C4DD9273A8C1C00AE52AF /* TwoLabelsDetailButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLabelsDetailButtonView.swift; sourceTree = "<group>"; };
 		CE5C4DDA273A8C1D00AE52AF /* TwoLabelsDetailButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoLabelsDetailButtonView.xib; sourceTree = "<group>"; };
 		CE5C4DE1273AA3FD00AE52AF /* AllertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllertViewController.swift; sourceTree = "<group>"; };
-		CE5C4DE2273AA3FD00AE52AF /* AllertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllertViewController.xib; sourceTree = "<group>"; };
 		CE5C4DE4273AA3FD00AE52AF /* AllertCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllertCollectionViewCell.swift; sourceTree = "<group>"; };
-		CE5C4DE5273AA3FD00AE52AF /* AllertCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllertCollectionViewCell.xib; sourceTree = "<group>"; };
 		CE9B1362272AAF2D0079C448 /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		CED03A8B2728616400B80C0C /* BezierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierView.swift; sourceTree = "<group>"; };
 		CED6B0A52725FA25003F139F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5C4DE1273AA3FD00AE52AF /* AllertViewController.swift */,
-				CE5C4DE2273AA3FD00AE52AF /* AllertViewController.xib */,
+				CE260CDF274582F6005B1EA8 /* AllertViewController.xib */,
 				CE5C4DE3273AA3FD00AE52AF /* Cell */,
 			);
 			path = UIAllertAction;
@@ -237,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5C4DE4273AA3FD00AE52AF /* AllertCollectionViewCell.swift */,
-				CE5C4DE5273AA3FD00AE52AF /* AllertCollectionViewCell.xib */,
+				CE260CDD27456D44005B1EA8 /* AllertCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -419,12 +419,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE260CDE27456D44005B1EA8 /* AllertCollectionViewCell.xib in Resources */,
 				CED9F84A27202C4200ACD752 /* LaunchScreen.storyboard in Resources */,
 				CED6B0A82725FA25003F139F /* TableViewCell.xib in Resources */,
-				CE5C4DEA273AA3FD00AE52AF /* AllertCollectionViewCell.xib in Resources */,
 				CED9F85927204D1D00ACD752 /* data.json in Resources */,
+				CE260CE0274582F6005B1EA8 /* AllertViewController.xib in Resources */,
 				CED9F84727202C4200ACD752 /* Assets.xcassets in Resources */,
-				CE5C4DE8273AA3FD00AE52AF /* AllertViewController.xib in Resources */,
 				CE5C4DDC273A8C1D00AE52AF /* TwoLabelsDetailButtonView.xib in Resources */,
 				CE5C4DBE273A890400AE52AF /* StateTableViewCell.xib in Resources */,
 			);

@@ -21,8 +21,16 @@ class CoordinatesViewController: UIViewController {
         mapView = MKMapView()
         layuot()
         mapView.delegate = self
+        mapView.mapType = .hybrid
         if placeMark != nil {
             setPlaceMark(model: placeMark)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: placeMark.lat, longitude: placeMark.lon)
+            self.mapView.addAnnotation(annotation)
+            self.mapView.camera = MKMapCamera(lookingAtCenter: annotation.coordinate,
+                                              fromDistance: 4000000,
+                                              pitch: 3,
+                                              heading: .greatestFiniteMagnitude)
         }
     }
 

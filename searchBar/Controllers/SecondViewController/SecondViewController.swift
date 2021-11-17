@@ -27,6 +27,10 @@ class SecondViewController: UIViewController {
     var filteredWorkItems: [Model]!
     var arrayOfAllElements: [Model]!
     var arrayOfDeletedCoordinates: [Model]!
+    var stackView: UIStackView!
+  
+    var constraint: Int!
+
     
     var sortedById: Bool!
     var sortedByState: Bool!
@@ -34,6 +38,8 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        constraint = Int(Constants.getStatus(status: .height))
+        stackView = UIStackView()
         tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
@@ -193,6 +199,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        stackView.isHidden = true
         let currentCellData = coordinates[indexPath.row]
         let controller = CoordinatesViewController()
         controller.placeMark = currentCellData
@@ -216,6 +223,48 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource, UISe
             tableView.reloadData()
         }
     }
+  
+    func stackViewLayOutConfigure() {
+        self.view.addSubview(stackView)
+        self.stackView.snp.makeConstraints { make in
+            make.height.equalTo(constraint! - 14)
+            make.leading.equalTo(view.snp.leading)
+            make.trailing.equalTo(view.snp.trailing)
+            make.bottom.equalTo(view.snp.bottom)
+        }
+    }
+    
+     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let fav = favorite(IndexPath: indexPath)
+        let a = UISwipeActionsConfiguration(actions: [fav])
+        return a
+    }
+
+    func favorite (IndexPath : IndexPath) -> UIContextualAction{
+        let action = UIContextualAction(style: .normal, title: "Edit") { (action, view, com) in
+            let currentCellInfo = self.coordinates[IndexPath.row]
+            self.stackViewLayOutConfigure()
+            GeoLocations().geoData(lat: currentCellInfo.lat, lon: currentCellInfo.lon) { [unowned self] placeMarks in
+                stackView.isHidden = false
+                let views = TwoLabelsDetailButtonView()
+                views.configure(lat: currentCellInfo.lat,
+                                long: currentCellInfo.lon,
+                                placeMarkName: "\( placeMarks.country ?? "")"  +
+                                "\( placeMarks.administrativeArea ?? "")"  +
+                                " \( placeMarks.name ?? "")") {
+                    present(self.alert, animated: true, completion: nil)
+                }
+                stackView.removeSubviews()
+                [views].forEach { stackView.addArrangedSubview($0) }
+                view.layoutIfNeeded()
+            }
+        }
+        action.backgroundColor = .green
+        return action
+    }
+    
+    
+    
 }
 extension SecondViewController: AllertViewControllerDelegate{
     func updateVal(val: Int) {

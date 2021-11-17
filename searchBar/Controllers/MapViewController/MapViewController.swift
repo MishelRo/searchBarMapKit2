@@ -108,7 +108,7 @@ class MapViewController: UIViewController {
     func stackViewLayOutConfigure() {
         self.view.addSubview(stackView)
         self.stackView.snp.makeConstraints { make in
-            make.height.equalTo(constraint! - 7)
+            make.height.equalTo(constraint! - 14)
             make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
             make.bottom.equalTo(view.snp.bottom)
